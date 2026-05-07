@@ -1,0 +1,8 @@
+# XAMPP / Local files
+cache/
+uploads/
+.DS_Store
+Thumbs.db
+
+# Config
+.env
