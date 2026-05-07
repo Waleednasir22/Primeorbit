@@ -3,7 +3,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?php echo isset($pageTitle) ? $pageTitle : "PrimeOrbit - Corporate Technology Company"; ?></title>
+    <meta name="description" content="PrimeOrbit - A premier corporate technology partner specializing in secure digital systems, enterprise modernization, and scalable software solutions for modern companies." />
+    <meta name="keywords" content="PrimeOrbit, Corporate Technology, Software Engineering, AI Integration, UI/UX Design, Digital Transformation, Secure Systems, Scalable Solutions" />
+    <meta name="author" content="PrimeOrbit Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://primeorbit.infinityfree.me/" />
+    <meta property="og:title" content="PrimeOrbit - Corporate Technology & Scalable Systems" />
+    <meta property="og:description" content="Building secure, scalable, and measurable digital products for modern enterprises. Explore PrimeOrbit's corporate technology solutions." />
+    <meta property="og:image" content="assets/images/team.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://primeorbit.infinityfree.me/" />
+    <meta property="twitter:title" content="PrimeOrbit - Corporate Technology & Scalable Systems" />
+    <meta property="twitter:description" content="Building secure, scalable, and measurable digital products for modern enterprises. Explore PrimeOrbit's corporate technology solutions." />
+    <meta property="twitter:image" content="assets/images/team.png" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://primeorbit.infinityfree.me/" />
+
+    <!-- Theme Color for Browser UI -->
+    <meta name="theme-color" content="#4285F4" />
+
+    <title><?php echo isset($pageTitle) ? $pageTitle : "PrimeOrbit - Corporate Technology & Scalable Systems"; ?></title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -105,6 +130,20 @@
             background-color: #4285F4;
             color: white;
         }
+
+        /* Preloader Styles */
+        #preloader {
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .loader-dots div {
+            animation: loader-dots 0.6s infinite alternate;
+        }
+        .loader-dots div:nth-child(2) { animation-delay: 0.2s; }
+        .loader-dots div:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes loader-dots {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(-10px); opacity: 0.3; }
+        }
     </style>
 
     <!-- Animation Libraries (Optimized with defer) -->
@@ -139,7 +178,43 @@
                 }
             }, 1200);
         });
+
+        // Preloader Logic
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 600);
+            }
+        });
     </script>
 </head>
-<body class="antialiased selection:bg-google-blue selection:text-white relative">
+<body class="antialiased selection:bg-google-blue selection:text-white relative" style="overflow: hidden;">
+
+    <!-- Premium Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+        <div class="flex flex-col items-center">
+            <div class="loader-dots flex gap-2 mb-6">
+                <div class="w-4 h-4 bg-google-blue rounded-full"></div>
+                <div class="w-4 h-4 bg-google-red rounded-full"></div>
+                <div class="w-4 h-4 bg-google-yellow rounded-full"></div>
+            </div>
+            <p class="font-display font-bold text-3xl tracking-tighter text-gray-900">
+                Prime<span class="text-google-blue">Orbit</span>
+            </p>
+            <div class="mt-4 h-[1px] w-12 bg-gray-100 overflow-hidden">
+                <div class="h-full bg-google-blue w-1/2 animate-[progress_1.5s_infinite_linear]"></div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes progress {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(200%); }
+        }
+    </style>
 

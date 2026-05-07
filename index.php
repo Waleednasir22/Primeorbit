@@ -92,6 +92,14 @@ switch ($view) {
         include 'components/explore_all_page.php';
         break;
 
+    case 'services':
+        include 'components/all_services.php';
+        break;
+
+    case 'projects':
+        include 'components/all_projects.php';
+        break;
+
     default:
         include 'components/hero.php';
         break;

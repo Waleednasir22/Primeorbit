@@ -11,8 +11,8 @@
     <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
       <a href="index.php#hero" class="hover:text-google-blue transition-colors">Home</a>
       <a href="index.php#about" class="hover:text-google-blue transition-colors">About</a>
-      <a href="index.php#services" class="hover:text-google-blue transition-colors">Services</a>
-      <a href="index.php#projects" class="hover:text-google-blue transition-colors">Projects</a>
+      <a href="index.php?view=services" class="hover:text-google-blue transition-colors">Services</a>
+      <a href="index.php?view=projects" class="hover:text-google-blue transition-colors">Projects</a>
       <a href="index.php#expert" class="hover:text-google-blue transition-colors">Team</a>
       <a href="index.php?view=blog" class="hover:text-google-blue transition-colors">Insights</a>
       <a href="index.php#contact" class="hover:text-google-blue transition-colors">Contact</a>

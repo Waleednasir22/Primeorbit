@@ -55,6 +55,16 @@ $services = $stmt->fetchAll();
         </div>
       <?php endforeach; ?>
     </div>
+
+    <!-- View All Button -->
+    <div class="mt-20 text-center service-header opacity-0 translate-y-10">
+      <a 
+        href="index.php?view=services" 
+        class="inline-flex items-center gap-3 px-10 py-5 bg-white border-2 border-gray-900 text-gray-900 rounded-full font-bold text-lg hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-xl shadow-gray-200"
+      >
+        View All Services <i data-lucide="layout-grid" class="w-5 h-5"></i>
+      </a>
+    </div>
   </div>
 </section>
 

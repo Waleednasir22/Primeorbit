@@ -72,6 +72,16 @@ $totalPanels = $projectCount + 1; // +1 for the intro panel
       </div>
     <?php endforeach; ?>
 
+    <!-- Final Explore Panel -->
+    <div class="project-panel w-full md:w-screen h-screen md:h-screen flex flex-col items-center justify-center p-8 md:p-24 relative bg-zinc-950 shrink-0">
+        <div class="text-center">
+            <h3 class="text-4xl md:text-6xl font-display font-bold mb-8">Want to see <span class="text-google-blue">more?</span></h3>
+            <a href="index.php?view=projects" class="inline-flex items-center gap-3 px-10 py-5 bg-google-blue text-white rounded-full font-bold text-xl hover:bg-white hover:text-google-blue transition-all duration-300 shadow-2xl shadow-blue-500/20">
+                Explore Full Portfolio <i data-lucide="arrow-right" class="w-6 h-6"></i>
+            </a>
+        </div>
+    </div>
+
   </div>
 </section>
 
